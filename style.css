@@ -1,0 +1,864 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', 'Arial', sans-serif;
+  }
+  body{
+    background-color: #a2a1a1;
+    overflow: hidden;
+  }
+  
+  /* HEADINGS */
+  
+  
+  
+  
+  /* BASIC SETUP */
+  
+  .page-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  /*
+  .nav-wrapper {
+    width: 100%;
+    position: fixed; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: rgb(190, 7, 7);
+  }
+*/
+
+  
+  
+  .navbar {
+    display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out items within the navbar */
+  padding: 25px 20px; /* Add padding around the navbar */
+  background-color: rgba(255, 255, 255, 0.692);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;/* Include padding in height calculation */
+  }
+
+  .navbar img {
+    height: 90px;
+    width: auto;
+    margin-right: 15px;
+    margin-left: 80px;
+    padding-bottom: 20px;
+  }
+  .navbar img:hover {
+    cursor: pointer;
+  }
+  
+.navbar ul {
+    list-style: none;
+    display: flex; /* Horizontal alignment for navigation items */
+  margin: 0;
+  padding: 0;
+  flex: 1; /* Take up remaining space */
+  justify-content: flex-start; 
+    
+ }
+ .nav-item {
+  padding: 15px;
+}
+  .nav-item a {
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .dropdown {
+    padding-top: 10px;
+  }
+  
+  
+  .donate-button {
+    position: fixed;
+  }
+  .donate-button, .donate-link {
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none; 
+    padding: 15px 10px;
+    background-color: #005ac0;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: fixed; /* Use fixed to keep it in view */
+    top: 15px; /* Adjust top as needed */
+    right: 15px; /* Position the button to the left of the menu toggle */
+    z-index: 1001;
+  }
+  .donate-button:hover {
+    cursor: pointer;
+  }
+  .donate-link:hover {
+    background-color: #003789; 
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+  }
+ 
+   
+  /* SEARCH FUNCTION */
+  
+  .search-form {
+    position: fixed;
+    top: 15px;
+    right: 150px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    transition: right 0.5s ease, width 0.5s ease, background-color 0.5s ease; /* Add transition for smooth effect */
+
+  }
+  .search {
+    width: 60px;
+    height: 50px;
+    transform: 0.5s;
+    background-color: rgba(255, 255, 255, 0) !important; 
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0 5px #7532d4;
+    transition: width 0.5s ease, background-color 0.5s ease, height 0.5s ease, right 0.5s ease; /* Add transitions */
+
+  }
+  
+  .search.active {
+    width: 400px;
+    right: 200px;
+    top: 92px;
+    background-color: rgb(59, 7, 7) !important; 
+    border: 1px solid #010102;
+    height: 60px;
+  }
+  
+  .search .icon {
+    top: 10px;
+    left: 0;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    z-index: 1000;
+    cursor: pointer;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0) !important; 
+    border-radius: 60px;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .search .icon:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #8338ec;
+    transform: translate(-4px, -4px);
+  }
+  
+  .search .icon:after {
+    content: "";
+    width: 3px;
+    height: 12px;
+    position: absolute;
+    background: #8338ec;
+    transform: translate(6px, 6px) rotate(315deg);
+  }
+  
+  .search .input #mysearch {
+    left: 60px;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(59, 7, 7);
+    color: #fdfdfd;
+    
+
+  }
+  
+  .search .input input {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 10px 0;
+    position: absolute;
+  }
+  
+  .clear {
+    top: -60%;
+    left: 340px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    color: #a00000;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 25px;
+  }
+  
+  .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.125rem;
+    padding: 0.5rem 0;
+    border: 0.5px solid rgba(55, 59, 79, 0.486);
+    border-radius: 0.1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.927); /* Adjust color and opacity as needed */
+    opacity: 0;
+    transform: scaleY(0); 
+    transform-origin: top; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    opacity: 1; /* Fully visible */
+    transform: scaleY(1); /* Scale to full size */
+  }
+  
+
+
+
+  /* Show the dropdown menu when hovering over the dropdown button */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    
+  }
+  
+  /* Optional: Style the dropdown menu items */
+  
+  
+  /* Optional: Change the background color of items on hover */
+  .dropdown-menu .dropdown-item:hover {
+    color: #0763cd;
+  }
+  .navbar .nav-item .dropdown-toggle::after {
+    content: none; /* Removes the arrow icon */
+    display: none; /* Ensures the icon does not take up any space */
+}
+  
+  /* MOBILE MENU & ANIMATION */
+  
+  .menu-toggle .bar{
+    width: 25px;
+    height: 3px;
+    background-color: #110f0f;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-toggle {
+    justify-self: end;
+    margin-right: 25px;
+    display: none;
+  }
+  
+  .menu-toggle:hover{
+    cursor: pointer;
+  }
+
+
+.mobile-nav {
+  max-height: 1000px; /* Adjust according to your content's height */
+}
+  
+  #mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(1){
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(3){
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    -ms-transform: translateY(-8px) rotate(-45deg);
+    -o-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+/*home section */
+.home-section {
+  /* Ensure relative positioning for the background */
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  z-index: 0; 
+}
+  .carousel-item {
+    height: 100vh; /* Full viewport height for each slide */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition:  background-image 0s ease-in-out, opacity 0.5s ease-in-out; /* Change transition time and effect */
+    opacity: 0;
+  }
+  .item1 {
+    background-image: url('images/children.jpg');
+  }
+  .item2 {
+    background-image: url('images/kenya-2018-classroom.jpg');
+  }
+  
+  .item3 {
+    background-image: url('images/Kenya_school_feeding.jpg');
+  }
+  .item4 {
+    background-image: url('images/Kenya_school_feeding.jpg');
+  }
+  .carousel-item.active {
+    opacity: 1;
+    transition:  background-image 0s ease-in-out,opacity 0.2s ease-in-out;
+  }
+  .carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block; /* Ensure slides are displayed during transitions */
+  }
+  .carousel-inner {
+    transition: none; /* Disable transition on the inner container to prevent background flashes */
+  }
+  .carousel-caption {
+    position: absolute;
+    top:90%; /* Adjust this value to move the caption vertically */
+    left:50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center vertically using transform */
+    z-index: 5; /* Ensure it appears above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Ensure the text is readable */
+    padding: 0 1rem; /* Add padding for better spacing */
+    max-width: 100%; 
+    width: 100%; /* Full width of its container */
+  box-sizing: border-box;/* Limit width to prevent overflow */
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-family: "Moderustic", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; /* Make the text bold */
+    margin: 0; /* Remove default margin */
+    padding: 0 1rem; /* Add padding to prevent text from touching the edges */
+    line-height: 1.2; /* Adjust line height for readability */
+  }
+  .custom-button {
+    position: absolute;
+    bottom: 150px; /* Adjust the distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button */
+    padding: 0.75rem 1.5rem; /* Adjust padding for better button size */
+    font-size: 1rem; /* Adjust font size if needed */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    background-color: #c5b4b4; /* Primary color of the button */
+    color: #000000; /* Text color */
+    border: 2px solid transparent; /* Remove border */
+    text-align: center; /* Center align text inside the button */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    z-index: 10;/* Smooth transition effects */
+  }
+  
+  .custom-button:hover {
+    cursor: pointer ;
+    border-color: #070e15;
+  background-color: #d4d4d4c3;/* Darker shade for hover effect */
+   /* Slightly enlarge the button on hover */
+  }
+  
+  .custom-button i {
+    margin-left: 0.4rem; /* Space between text and icon */
+    font-size: 1rem; /* Adjust icon size */
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 10; 
+    
+  }
+  
+  .carousel-control-prev {
+    left: 15px;
+  }
+  
+  .carousel-control-next {
+    right: 15px;
+  }
+  
+  /* Control Icons */
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%, 100%;
+  }
+
+  .carousel-item.item4 {
+    background-color: #ffffff; /* Set the background color to white */
+    background-image: none; /* Remove any background image */
+    background-size: cover; /* Ensure the background covers the entire item */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; 
+    height: 100vh; /* Ensure it takes up the full viewport height */
+    position: relative;
+  /* Prevent repeating the background image */
+  }
+  .custom-caption {
+    position: absolute; /* Absolute positioning to place it at the top */
+    top: 350px; /* Align the caption at the top */
+    left: 600px; /* Stretch across the full width */
+    width: 100%; /* Ensure it takes up the full width of the carousel item */
+    height: 100%; /* Ensure it takes up the full height of the carousel item */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    text-align: left;/* Align the content to the top */
+     /* Center text */
+    padding: 20px; /* Optional padding */
+    box-sizing: border-box;//* Optional: Add padding to the top if needed */
+}
+
+.custom-caption h1 {
+    font-size: 40px;
+    color: #000000; /* Adjust the color as needed */
+      /* Adjust text color to ensure good contrast */
+    
+    margin: 0; /* Remove default margin */
+    /* Optional: Adjust the position within the caption */
+    padding: 0 100px; 
+    padding-right: 300px;/* Add horizontal padding */
+    /* Adjust the margin-top or margin-bottom as needed */
+    margin-top: 35px; 
+    font-family: "Arapey", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.custom-caption p {
+  font-size: 15px;
+  color: #000000; /* Adjust the color as needed */
+    /* Adjust text color to ensure good contrast */
+  margin: 0; /* Remove default margin */
+  /* Optional: Adjust the position within the caption */
+  padding: 0 100px; 
+  padding-right: 300px;/* Add horizontal padding */
+  /* Adjust the margin-top or margin-bottom as needed */
+  margin-top: 30px; 
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.caption-buttons {
+  position: absolute;
+  top: 70%; /* Center vertically */
+  left: 100px; /* Align to the leftmost side */
+  transform: translateY(-50%); /* Center vertically relative to the container */
+  display: flex; /* Display the buttons horizontally */
+  justify-content: flex-start; /* Align buttons to the left */
+  padding: 40px; /* Space between buttons */
+}
+
+.custom-button1 {
+  background-color: #787d78; /* First button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 20px; /* Space between buttons */
+  text-decoration: none;
+}
+
+.custom-button2 {
+  background-color: #2b2c2b; /* Second button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.custom-button1:hover,
+.custom-button2:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  cursor: pointer;
+  background-color: #000000;
+}
+
+  /* KEYFRAME ANIMATIONS */
+  
+  @-webkit-keyframes gradbar {
+      0% {
+          background-position: 0% 50%
+      }
+      50% {
+          background-position: 100% 50%
+      }
+      100% {
+          background-position: 0% 50%
+      }
+  }
+  
+  @-moz-keyframes gradbar {
+      0% {
+          background-position: 0% 50%
+      }
+      50% {
+          background-position: 100% 50%
+      }
+      100% {
+          background-position: 0% 50%
+      }
+  }
+  
+  @keyframes gradbar {
+      0% {
+          background-position: 0% 50%
+      }
+      50% {
+          background-position: 100% 50%
+      }
+      100% {
+          background-position: 0% 50%
+      }
+  }
+ 
+  /* Media Queries */
+  
+    /* Mobile Devices - Phones/Tablets */
+  
+  @media only screen and (max-width: 1000px) { 
+    .navbar {
+      padding: 30px 20px;
+      height: 80px;
+    }
+    .nav-item {
+      position: relative; /* Ensure that dropdown-menu is positioned relative to this item */
+  }
+    .nav{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #7e171723;
+        transform: translateX(100%); /* Initially off-screen to the right */
+        transition: transform 0.3s ease; /* Smooth transition effect */
+        overflow: hidden;
+      }
+      .navbar img {
+                width: auto;
+          height: 60px;
+          width: auto;
+          margin-right: 10px;
+          margin-left: 0px;
+          padding-bottom: 0px;
+          padding-top: 0px;
+          position: fixed;
+      }
+    .nav.mobile-nav {
+        transform: translateX(0); 
+        transition: transform 0.6s ease;/* Slides into view */
+      }
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute; /* Absolute positioning within the nav */
+        top: 80px; /* Align to the top of the nav */
+        width: 40%; /* Full width of the nav container */
+        height: 100vh; /* Full height of the nav container */
+        background-color:  rgb(39, 40, 34);
+        padding: 20px 0; /* Adjust padding to fit content */
+        box-sizing: border-box; /* Include padding in height calculation */
+        text-align: left;   
+    }
+    
+    .navbar li {
+      padding: 10x;
+      border-bottom: 1px solid #372f2f;
+    }
+    
+    .navbar li:first-child {
+      margin-top: 0px;
+    }
+    
+    .navbar li a {
+      font-size: 13px;
+      color: #fdfdfd;
+      font-family: "Moderustic", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: normal;
+    }
+    .nav-item a {
+      display: block;
+      margin-left: 0px;
+    }
+    .menu-toggle {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 10px; /* Position at the top right */
+    z-index: 1001;
+    display: block;
+   }  
+   
+    .menu-toggle, .bar {
+      display: block;
+      cursor: pointer;
+      
+    }
+  
+    .navbar.mobile-nav ul {
+        transform: translateX(-100%); /* Slides into view */
+      }
+      .donate-button {
+        position: fixed;
+        top: 4px; 
+        right: 80px; /* Position the button right next to the hamburger icon */
+        z-index: 1001;
+        background-color: #911515;
+        display: block;
+      }
+      .donate-button, .donate-link {
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        text-decoration: none; 
+        padding: 21px 13px;
+        background-color: #005ac0;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        position: fixed; /* Use fixed to keep it in view */
+        top: 5px; /* Adjust top as needed */
+        right: 100px; /* Position the button to the left of the menu toggle */
+        z-index: 1001;
+      }  
+      .search-form {
+        position: fixed;
+        top: 10px;
+        right: 200px;
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+      }  
+      .search.active {
+        width: 200px;
+        top: 83px;
+        position: fixed;
+        left: 0px;
+      }
+      .clear {
+        top: -60%;
+        left: 150px;
+        font-size: 25px;
+        display: flex;
+        color: #a00000;
+        cursor: pointer;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+      }
+      .dropdown-menu {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 0px;
+        margin-top: 0; /* Remove top margin */
+        padding-top: 0; /* Remove top padding */
+        padding-bottom: 10px;
+        background-color:  rgb(39, 40, 34);
+        border: none;
+        opacity: 0;
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Optional: remove box-shadow for mobile view */
+        z-index: 1000; 
+      }
+  .dropdown-menu.dropdown-item a{
+    font-size: 10px ; /* Adjusts text size */
+    color: #fdfdfd ; /* Light text color for contrast */
+    font-family: "Moderustic", sans-serif ; /* Font family */
+    font-weight: 10 ; /* Light font weight */
+    font-style: normal ; /* Normal font style */
+    text-decoration: none ;
+  }
+  .dropdown-item:hover {
+    text-decoration: none;
+    background-color: rgb(39, 40, 34);
+  }
+    .dropdown-menu.show {
+      display: block; /* Show when .show class is added */
+      opacity: 1;
+      transform: scaleY(1); 
+      /* Scale to full size */
+  }
+    .toggle-icon {
+      position: absolute; /* Use absolute positioning */
+      top: 20px; /* Adjust top position */
+      right: 35px;
+      margin-left:80px; /* Space between text and icon */
+      transition: transform 0.3s ease; 
+      color: #fdfdfd;
+      /* Smooth icon transition */
+  }
+  .nav-item .toggle-icon {
+    z-index: 1001; /* Keep it above other elements */
+}
+  .toggle-icon:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .custom-margin {
+    margin-left: 15px;
+  }
+
+  /*home sectiom*/
+
+  .carousel-caption h1{
+    font-size: 1.1rem;
+  }
+  .custom-button {
+    /* Center the button */
+    padding: 0.75rem 1.5rem; /* Adjust padding for better button size */
+    font-size: 0.75rem; /* Adjust font size if needed */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    background-color: #ffffffeb; /* Primary color of the button */
+    color: #000000; /* Text color */
+    border: 1px solid transparent; /* Remove border */
+    
+  }
+  .carousel-item {
+    height: 50vh; /* Set the height to 50% of the viewport height for mobile */
+}
+.carousel-item.item4 {
+  height: 50vh;
+}
+.custom-caption {
+  position: absolute; /* Absolute positioning to place it at the top */
+  top: 250px; /* Align the caption at the top */
+  left: 200px; /* Stretch across the full width */
+  width: 100%; /* Ensure it takes up the full width of the carousel item */
+  height: 100%; /* Ensure it takes up the full height of the carousel item */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  text-align: left;/* Align the content to the top */
+   /* Center text */
+  padding: 20px; /* Optional padding */
+  box-sizing: border-box;//* Optional: Add padding to the top if needed */
+}
+.custom-caption h1 {
+  font-size: 20px;
+  color: #000000; /* Adjust the color as needed */
+    /* Adjust text color to ensure good contrast */
+  
+  margin: 0; /* Remove default margin */
+  /* Optional: Adjust the position within the caption */
+  padding: 0 40px; 
+  padding-right: 60px;/* Add horizontal padding */
+  /* Adjust the margin-top or margin-bottom as needed */
+  margin-top: 60px; 
+  font-family: "Arapey", serif;
+font-weight: 600;
+font-style: normal;
+}
+.custom-caption p {
+font-size: 10px;
+color: #000000; /* Adjust the color as needed */
+  /* Adjust text color to ensure good contrast */
+margin: 0; /* Remove default margin */
+/* Optional: Adjust the position within the caption */
+padding: 0 40px; 
+padding-right: 40px;/* Add horizontal padding */
+/* Adjust the margin-top or margin-bottom as needed */
+margin-top: 10px; 
+font-family: "Alegreya Sans", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.caption-buttons {
+  position: absolute;
+  top: 70%; /* Center vertically */
+  left: 50px; /* Align to the leftmost side */
+  transform: translateY(-50%); /* Center vertically relative to the container */
+  display: flex; /* Display the buttons horizontally */
+  justify-content: flex-start; /* Align buttons to the left */
+  padding: 40px;
+  padding: 0px; /* Space between buttons */
+}  
+.custom-button1 {
+  background-color: #787d78; /* First button color */
+  color: #fff;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 10px; /* Space between buttons */
+  text-decoration: none;
+}
+
+.custom-button2 {
+  background-color: #2b2c2b; /* Second button color */
+  color: #fff;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.custom-button1:hover,
+.custom-button2:hover {
+
+  background-color: #000000;
+}
+  }
+  @media only screen and (min-width: 1000px) {
+    .toggle-icon {
+      display: none;
+     }
+  }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper"> 
+     <nav class="navbar">   
+      
+        <img src="images/logo-color.svg" alt="Company Logo">
+          
+       <div class="menu-toggle" id="mobile-menu">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>  
+       </div>
+       <form class="search-form" >
+        <div class="search">
+          <div class="icon"></div>
+          <div class="input">
+            <input type="text" placeholder="Search..." id="mysearch">
+          </div>
+          <span class="clear" id="close-search">x</span>
+        </div>
+      </form>
+       <div class="donate-button">
+        <a href="#" class="donate-link">Donate now</a>
+      </div>
+      
+       <ul class="nav">
+         <li class="nav-item custom-margin"><a href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link custom-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us 
+            </a>
+            <i class="fa-solid fa-plus toggle-icon"></i>
+
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+             <a class="dropdown-item" href="#">History</a>
+             <a class="dropdown-item" href="#">Who we are</a>
+             <a class="dropdown-item" href="#">Our Team</a>
+           </div>
+         </li> 
+         <li class="nav-item custom-margin"><a href="#">What we do</a></li>
+       
+         <li class="nav-item dropdown">
+          <a class="nav-link custom-toggle " href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Resources
+          </a>          
+          <i class="fa-solid fa-plus toggle-icon"></i>
+
+         <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="dropdownMenuLink">
+           <a class="dropdown-item" href="#">Reports</a>
+         </div>
+          </li>
+        <li class="nav-item custom-margin"><a href="#">Contact Us </a></li>
+       </ul>
+       
+      </nav>
+     <section class="home-section">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active item1">
+            <a href="#your-link" class="btn btn-primary custom-button ">Learn More<i class="fa-solid fa-chevron-right"></i></a>
+
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+              <div>
+                <h1>Showcasing the Vibrant Traditions and Resilience of the Turkana Community</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item item2" style="background-image: url('images/Kenya_Turkana_Maternal-Health_John-Rae_2017_87A3461.jpg');">
+            <a href="#your-link" class="btn btn-primary custom-button ">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+              <div>
+                <h1>Providing care and support to uplift mothers and children.</h1>
+                
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item item3" style="background-image: url('images/Namoruputh\ 1.jpg.jpg');">
+            <a href="#your-link" class="btn btn-primary custom-button ">Learn more <i class="fa-solid fa-chevron-right"></i></a>
+
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+              <div>
+                <h1>Empowering young girls to reach their full potential through education and support.</h1>
+                
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item item4">
+            <div class="carousel-caption  custom-caption">
+                <h1>Embracing Unity: Spreading Love to Marginalized Communities</h1>
+                <p>Discover the challenges faced by the Turkana community,<br> a nomadic people living in the harsh desert of northern Kenya. Learn how you can contribute to their well-being through our platform. By supporting our initiatives, you're helping to build a brighter future for marginalized communities. Join us in spreading love and hope.</p>
+                <div class="caption-buttons">
+                  <a href="#your-link" class="btn btn-primary custom-button1 ">Our Organization <i class="fa-solid fa-chevron-right"></i></a>
+                 
+                  <a href="#your-link" class="btn btn-primary custom-button2 ">Learn More<i class="fa-solid fa-chevron-right"></i></a>
+
+
+                </div>            
+              </div>
+          </div>
+          <!-- Add more carousel items as needed -->
+        </div>
+        
+        <!-- Optional: Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+       </section>
+     <section class="features">
+       
+     </section>
+   </div>
+   <script src="script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
