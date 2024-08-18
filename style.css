@@ -4,10 +4,10 @@
     box-sizing: border-box;
     font-family: 'Lato', 'Arial', sans-serif;
   }
-  body{
-    background-color: #a2a1a1;
-    overflow: hidden;
-  }
+  html, body {
+    height: 100%; /* Ensure the body can grow with content */
+    overflow-y: auto;
+}
   
   /* HEADINGS */
   
@@ -38,7 +38,7 @@
     display: flex;
   align-items: center;
   justify-content: space-between; /* Space out items within the navbar */
-  padding: 25px 20px; /* Add padding around the navbar */
+  padding: 15px 20px; /* Add padding around the navbar */
   background-color: rgba(255, 255, 255, 0.692);
   position: fixed;
   top: 0;
@@ -525,6 +525,120 @@
   background-color: #000000;
 }
 
+/* About us section */
+.page-wrapper-about {
+  background-color: #e4e4e4;
+}
+ .about-us-section {
+    background-color: #e4e4e4; /* Light background color */
+    padding: 160px 20px; /* Padding around the content */
+    border-radius: 8px; /* Slightly rounded corners */
+    max-width: 900px; /* Maximum width for readability */
+    margin: 0 auto; /* Center align the section */
+}
+
+.about-us-section h2 {
+   font-family: "EB Garamond", serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+    color: #000000;  
+    font-size: 43px;  
+    margin-bottom: 20px; 
+}
+
+.about-us-section p {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 400;
+    color: #000000; 
+    font-size: 18px;  
+    line-height: 1.6;   
+    margin-bottom: 40px;  
+}
+.italic{
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+.about-us-section strong {
+   font-family: "Noto Serif", serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-variation-settings:"wdth" 400;
+   color: #000000; 
+   font-size: 20px;  
+   line-height: 1.6;   
+   margin-bottom: 20px;  
+   font-weight: bold; /* Ensure text is bold */
+   padding: 2px 6px; /* Add some padding around the text */
+   border-radius: 4px; /* Slightly rounded corners */
+}
+.about-us-section ul {
+    list-style-type: disc; /* Bullet points */
+    margin-left: 20px; /* Indentation for the list */
+    color: #555; /* Same text color as paragraphs */
+}
+
+.about-us-section ul li {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 400;
+  color: #000000; 
+  font-size: 18px;  /* Match font size of paragraph& */
+}
+.mission-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures space between text and image */
+  flex-wrap: wrap; /* Allows for responsive design */
+}
+
+.mission-text {
+  flex: 1;
+  padding-right: 40px; /* Space between text and image */
+}
+
+.mission-image {
+  flex: 1;
+  max-width: 50%; /* Adjust size if needed */
+}
+
+.mission-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(46, 13, 50, 0.559); /* Optional: adds a subtle shadow */
+}
+.goals-section h2 {
+  margin-bottom: 20px;
+}
+.goals-section ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0;
+}
+
+.goals-section li {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+  margin-bottom: 60px; /* Space between list items */
+  line-height: 1.6; /* Improve readability */
+}
+.goals-section li p{
+  margin-bottom: 0px;
+}
+.goals-section img {
+  width: 100%; /* Adjust size as needed */
+  height: 200px;
+  border-radius: 5px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(46, 13, 50, 0.559);}
   /* KEYFRAME ANIMATIONS */
   
   @-webkit-keyframes gradbar {
@@ -855,6 +969,52 @@ font-style: normal;
 .custom-button2:hover {
 
   background-color: #000000;
+}
+
+/* about us section*/
+.about-us-section {
+  padding: 80px 10px; /* Reduced padding for smaller screens */
+}
+
+.about-us-section h2 {
+  font-size: 28px; /* Adjust font size for smaller screens */
+}
+
+.about-us-section p {
+  font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.about-us-section strong {
+  font-size: 18px; /* Adjust font size for smaller screens */
+}
+
+.mission-content {
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-bottom: 10px;
+}
+
+.mission-text {
+  padding-right: 0; /* Remove padding on smaller screens */
+  margin-bottom: 0px; /* Add space below text */
+}
+.mission-text p{
+  margin-bottom: 10px;
+}
+
+.mission-image {
+  max-width: 100%; 
+  margin-bottom: 20px;
+}
+
+.goals-section li {
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: flex-start; /* Align items to the start */
+}
+
+.goals-section img {
+  height: 100%; /* Adjust image height */
+  width: 250px; /* Full width on smaller screens */
 }
   }
   @media only screen and (min-width: 1000px) {
