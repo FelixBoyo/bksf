@@ -23,6 +23,15 @@ clearBtn.onclick = function () {
    document.getElementById('mysearch').value = '';
    search.classList.remove("active"); // Close the search bar when the close button is clicked
 };
+
+// Close the search bar if the click is outside of it
+document.addEventListener('click', function(event) {
+   if (!search.contains(event.target) && !icon.contains(event.target) && !clearBtn.contains(event.target)) {
+       search.classList.remove("active");
+   }
+});
+
+
 $('.toggle-icon').click(function() {
    var $dropdownMenu = $(this).next('.dropdown-menu');
    

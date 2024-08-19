@@ -134,7 +134,6 @@
     background-color: rgba(255, 255, 255, 0) !important; 
     overflow: hidden;
     position: relative;
-    border-radius: 5px;
     box-shadow: 0 0 0 0 5px #7532d4;
     transition: width 0.5s ease, background-color 0.5s ease, height 0.5s ease, right 0.5s ease; /* Add transitions */
 
@@ -834,12 +833,11 @@
         color: #fffefe;
         text-decoration: none; 
         padding: 7px 7px;
-        background-color: #002b76;
-        font-weight: bold;
+        background-color: #003590;
         transition: background-color 0.3s ease;
-        position: fixed; /* Use fixed to keep it in view */
-        top: 19px; /* Adjust top as needed */
-        right: 70px; /* Position the button to the left of the menu toggle */
+        position: fixed;   
+        top: 19px;  
+        right: 70px;   
         z-index: 1001;
       }  
       .search-form {
