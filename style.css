@@ -7,6 +7,7 @@
   html, body {
     height: 100%; /* Ensure the body can grow with content */
     overflow-y: auto;
+    background-color: #e4e4e4;
 }
   
   /* HEADINGS */
@@ -340,7 +341,7 @@
     background-image: url('images/Kenya_school_feeding.jpg');
   }
   .item4 {
-    background-image: url('images/Kenya_school_feeding.jpg');
+    background-image: url('images/image.png');
   }
   .carousel-item.active {
     opacity: 1;
@@ -369,14 +370,14 @@
   box-sizing: border-box;/* Limit width to prevent overflow */
   }
   .carousel-caption h1 {
-    font-size: 1.5rem; /* Adjust font size as needed */
+    font-size:25px; 
     font-family: "Moderustic", system-ui;
     font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal; /* Make the text bold */
-    margin: 0; /* Remove default margin */
-    padding: 0 1rem; /* Add padding to prevent text from touching the edges */
-    line-height: 1.2; /* Adjust line height for readability */
+    font-weight: 600;
+    font-style: normal;  
+    margin: 0;  
+    padding: 0 1rem;    
+    line-height: 1.2;   
   }
   .custom-button {
     position: absolute;
@@ -462,14 +463,10 @@
 
 .custom-caption h1 {
     font-size: 40px;
-    color: #000000; /* Adjust the color as needed */
-      /* Adjust text color to ensure good contrast */
-    
-    margin: 0; /* Remove default margin */
-    /* Optional: Adjust the position within the caption */
+    color: #000000; 
+    margin: 0; 
     padding: 0 100px; 
-    padding-right: 300px;/* Add horizontal padding */
-    /* Adjust the margin-top or margin-bottom as needed */
+    padding-right: 300px; 
     margin-top: 35px; 
     font-family: "Arapey", serif;
   font-weight: 600;
@@ -477,16 +474,13 @@
 }
 .custom-caption p {
   font-size: 15px;
-  color: #000000; /* Adjust the color as needed */
-    /* Adjust text color to ensure good contrast */
-  margin: 0; /* Remove default margin */
-  /* Optional: Adjust the position within the caption */
+  color: #ffffff;  
+  margin: 0;  
   padding: 0 100px; 
-  padding-right: 300px;/* Add horizontal padding */
-  /* Adjust the margin-top or margin-bottom as needed */
+  padding-right: 300px;  
   margin-top: 30px; 
   font-family: "Alegreya Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 .caption-buttons {
@@ -500,21 +494,20 @@
 }
 
 .custom-button1 {
-  background-color: #787d78; /* First button color */
+  background-color: #787d78;  
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
-  margin-right: 20px; /* Space between buttons */
+  border-radius: 1px;
+  margin-right: 20px;  
   text-decoration: none;
 }
 
 .custom-button2 {
-  background-color: #2b2c2b; /* Second button color */
+  background-color: #2b2c2b;  
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
   text-decoration: none;
 }
 
@@ -527,14 +520,14 @@
 
 /* About us section */
 .page-wrapper-about {
-  background-color: #e4e4e4;
+  background-color: #ffffff;
 }
  .about-us-section {
-    background-color: #e4e4e4; /* Light background color */
-    padding: 160px 20px; /* Padding around the content */
-    border-radius: 8px; /* Slightly rounded corners */
-    max-width: 900px; /* Maximum width for readability */
-    margin: 0 auto; /* Center align the section */
+    background-color: #ffffff;   
+    padding: 160px 20px;  
+    border-radius: 8px;  
+    max-width: 900px;  
+    margin: 0 auto;  
 }
 
 .about-us-section h2 {
@@ -613,8 +606,7 @@
 .mission-image img {
   width: 80%;
   height: auto;
-  border-radius: 5px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(46, 13, 50, 0.559); /* Optional: adds a subtle shadow */
+  border-radius: 0px; /* Optional: adds rounded corners */
 }
 .goals-section h2 {
   margin-bottom: 20px;
@@ -637,8 +629,67 @@
 .goals-section img {
   width: 100%; /* Adjust size as needed */
   height: 200px;
-  border-radius: 5px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(46, 13, 50, 0.559);}
+  }
+  
+  /*About us home section*/
+  .about{
+    padding:10% 0;
+    width:100%;
+    height:auto;
+    background-color:#ffffff;
+ }
+ .about .left{
+  padding:2% 0;
+  float:left;
+  width:50%;
+  display:inline-block;
+}
+.about .right{
+  width:50%;
+  display:inline-block;
+  padding: 70px 0px;
+}
+.about .right img{
+  width:100%;
+   
+  border-radius: 5px; 
+ }
+.about .left h1{
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+   color: #000000;  
+   font-size: 43px;  
+   margin-bottom: 20px; 
+  text-align:center;
+  margin:0 0 10px 0;
+}
+.about .left hr{
+  width:55%;
+  border-top:2px solid #000000;
+  border-bottom:none;
+  margin: 10px auto;
+}
+.about .left p{
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 400;
+    color: #000000; 
+    font-size: 18px;  
+    line-height: 1.6;  
+  margin:40px auto;
+  width:80%
+}
+.clear{
+  clear: both;			
+}
+.about-buttons {
+  padding-left: 60px;
+}
+  
   /* KEYFRAME ANIMATIONS */
   
   @-webkit-keyframes gradbar {
@@ -712,6 +763,7 @@
           padding-bottom: 0px;
           padding-top: 0px;
           position: fixed;
+          top: 10px;
       }
     .nav.mobile-nav {
         transform: translateX(0); 
@@ -872,7 +924,9 @@
   }
 
   /*home sectiom*/
-
+.home-section {
+  height: 60vh;
+}
   .carousel-caption h1{
     font-size: 1.1rem;
   }
@@ -888,10 +942,10 @@
     
   }
   .carousel-item {
-    height: 50vh; /* Set the height to 50% of the viewport height for mobile */
+    height: 60vh; /* Set the height to 50% of the viewport height for mobile */
 }
 .carousel-item.item4 {
-  height: 50vh;
+  height: 60vh;
 }
 .custom-caption {
   position: absolute; /* Absolute positioning to place it at the top */
@@ -909,32 +963,17 @@
 }
 .custom-caption h1 {
   font-size: 20px;
-  color: #000000; /* Adjust the color as needed */
-    /* Adjust text color to ensure good contrast */
-  
-  margin: 0; /* Remove default margin */
-  /* Optional: Adjust the position within the caption */
-  padding: 0 40px; 
-  padding-right: 60px;/* Add horizontal padding */
-  /* Adjust the margin-top or margin-bottom as needed */
-  margin-top: 60px; 
+  color: #000000;  
+  margin: 0;   
+  padding: 0 30px; 
+  padding-right: 60px;  
+  margin-top: 120px; 
   font-family: "Arapey", serif;
 font-weight: 600;
 font-style: normal;
 }
 .custom-caption p {
-font-size: 10px;
-color: #000000; /* Adjust the color as needed */
-  /* Adjust text color to ensure good contrast */
-margin: 0; /* Remove default margin */
-/* Optional: Adjust the position within the caption */
-padding: 0 40px; 
-padding-right: 40px;/* Add horizontal padding */
-/* Adjust the margin-top or margin-bottom as needed */
-margin-top: 10px; 
-font-family: "Alegreya Sans", sans-serif;
-font-weight: 400;
-font-style: normal;
+ display: none;
 }
 .caption-buttons {
   position: absolute;
@@ -949,7 +988,7 @@ font-style: normal;
 .custom-button1 {
   background-color: #787d78; /* First button color */
   color: #fff;
-  padding: 5px 5px;
+  padding: 10px 10px;
   border: none;
   border-radius: 2px;
   margin-right: 10px; /* Space between buttons */
@@ -959,9 +998,8 @@ font-style: normal;
 .custom-button2 {
   background-color: #2b2c2b; /* Second button color */
   color: #fff;
-  padding: 5px 5px;
+  padding: 10px 10px;
   border: none;
-  border-radius: 2px;
   text-decoration: none;
 }
 
@@ -973,19 +1011,19 @@ font-style: normal;
 
 /* about us section*/
 .about-us-section {
-  padding: 80px 10px; /* Reduced padding for smaller screens */
+  padding: 80px 10px;  
 }
 
 .about-us-section h2 {
-  font-size: 28px; /* Adjust font size for smaller screens */
+  font-size: 28px;   
 }
 
 .about-us-section p {
-  font-size: 16px; /* Adjust font size for smaller screens */
+  font-size: 16px;  
 }
 
 .about-us-section strong {
-  font-size: 18px; /* Adjust font size for smaller screens */
+  font-size: 18px;   
 }
 
 .mission-content {
@@ -995,8 +1033,8 @@ font-style: normal;
 }
 
 .mission-text {
-  padding-right: 0; /* Remove padding on smaller screens */
-  margin-bottom: 0px; /* Add space below text */
+  padding-right: 0;   
+  margin-bottom: 0px;  
 }
 .mission-text p{
   margin-bottom: 10px;
@@ -1008,13 +1046,20 @@ font-style: normal;
 }
 
 .goals-section li {
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: flex-start; /* Align items to the start */
+  flex-direction: column;   
+  align-items: flex-start;  
 }
 
 .goals-section img {
-  height: 100%; /* Adjust image height */
-  width: 250px; /* Full width on smaller screens */
+  height: 100%;  
+  width: 250px;  
+}
+.about .left{
+  width:100%; 
+}
+  .about .right{
+    padding: 40px 20px 0px 20px;
+  width:100%; 
 }
   }
   @media only screen and (min-width: 1000px) {
