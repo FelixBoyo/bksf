@@ -831,21 +831,21 @@
       .donate-button, .donate-link {
         display: inline-block;
         cursor: pointer;
-        color: #ffffff;
+        color: #fffefe;
         text-decoration: none; 
-        padding: 21px 13px;
-        background-color: #005ac0;
+        padding: 7px 7px;
+        background-color: #002b76;
         font-weight: bold;
         transition: background-color 0.3s ease;
         position: fixed; /* Use fixed to keep it in view */
-        top: 5px; /* Adjust top as needed */
-        right: 100px; /* Position the button to the left of the menu toggle */
+        top: 19px; /* Adjust top as needed */
+        right: 70px; /* Position the button to the left of the menu toggle */
         z-index: 1001;
       }  
       .search-form {
         position: fixed;
         top: 10px;
-        right: 200px;
+        right: 152px;
         z-index: 1001;
         display: flex;
         align-items: center;
@@ -967,7 +967,7 @@
   margin: 0;   
   padding: 0 30px; 
   padding-right: 60px;  
-  margin-top: 120px; 
+  margin-top: 150px; 
   font-family: "Arapey", serif;
 font-weight: 600;
 font-style: normal;
@@ -1061,9 +1061,28 @@ font-style: normal;
     padding: 40px 20px 0px 20px;
   width:100%; 
 }
+.about .left h1 {
+  font-size: 30px ;
+}
+.about .left p{
+  font-size: 15px;
+}
   }
   @media only screen and (min-width: 1000px) {
     .toggle-icon {
       display: none;
      }
+  }
+  @media only screen and (max-width: 400px) {
+    .custom-caption h1 {
+      font-size: 20px;
+      color: #000000;  
+      margin: 0;   
+      padding: 0 20px; 
+      padding-right: 20px;  
+      margin-top: 50px; 
+      font-family: "Arapey", serif;
+    font-weight: 600;
+    font-style: normal;
+    }
   }
