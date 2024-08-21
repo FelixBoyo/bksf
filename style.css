@@ -7,7 +7,7 @@
   html, body {
     height: 100%; /* Ensure the body can grow with content */
     overflow-y: auto;
-    background-color: #e4e4e4;
+    background-color: #ffffff;
 }
   
   /* HEADINGS */
@@ -71,6 +71,7 @@
  }
  .nav-item {
   padding: 15px;
+  z-index: 1;
 }
   .nav-item a {
     color: #000;
@@ -636,6 +637,7 @@
     width:100%;
     height:auto;
     background-color:#ffffff;
+    padding-bottom: 5px;
  }
  .about .left{
   padding:2% 0;
@@ -688,44 +690,180 @@
 .about-buttons {
   padding-left: 60px;
 }
-  
-  /* KEYFRAME ANIMATIONS */
-  
-  @-webkit-keyframes gradbar {
-      0% {
-          background-position: 0% 50%
-      }
-      50% {
-          background-position: 100% 50%
-      }
-      100% {
-          background-position: 0% 50%
-      }
+
+
+/* target number section*/
+.target-numbers {
+  padding:0% 0;
+  width:100%;
+  height:auto;
+  background-color:#ffffff;
+}
+.target-numbers .left{
+  padding:  6%;;
+  float:left;
+  width:50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.target-numbers .right{
+  width:50%;
+  display:inline-block;
+  padding: 130px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 50px 35px 150px;
+  padding: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  width: 60%; /* Width of each card, adjusted for gap */
+  max-width: 500px; 
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.links:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.links .icon {
+  margin-right: auto; /* Push the icon to the leftmost position */
+}
+
+.icon img {
+  width: 40px;  /* Adjust size as needed */
+  height: 40px;  /* Adjust size as needed */
+ margin-right: auto;
+}
+.links .content {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  flex: 1; /* Allow content to take up available space */
+}
+.target-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 9px auto;
+  padding: 9px;
+  background-color: #60575700;
+  width: calc(50% - 10px); /* Width of each card, adjusted for gap */
+  max-width: 500px; 
+}
+
+.target-numbers h1 {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+   color: #000000;  
+   font-size: 43px;  
+   margin-bottom: 20px; 
+  text-align:center;
+  margin:0 0 10px 0;
+}
+.target-item .icon {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+
+.target-item .count {
+  font-family: "Kalnia Glaze", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #2b343e;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.content h2 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #3c3838; 
+  font-size: 16px;  
+  line-height: 1.6;  
+}
+.target-item h2 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #3c3838; 
+  font-size: 13px;  
+  line-height: 1.6;  
+}
+.target-numbers p{
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 400;
+  color: #000000; 
+  font-size: 18px;  
+}
+.target-numbers hr {
+  width: 60%;
+  border-top:2px solid #000000;
+  border-bottom:none;
+  margin: 10px auto;
+}
+.target-item .icon i{
+  color: #d809dc;
+}
+.target-numbers .right h1{
+  margin-bottom: 10px;
+}
+.target-numbers .right hr{
+  margin: 10px auto;
+}
+ 
+  /* footer */
+  footer {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;     
+    width: 100%;
+    border-top: 1px solid #c0c0c0;
+  }
+  footer .nav-item {
+    display: flex;
+    justify-content: center; 
+  }
+  footer .nav-link {
+    color: #ffffff00; /* Adjust text color for better visibility */
+    padding: 0.5rem 1rem; /* Adjust padding for nav links */
   }
   
-  @-moz-keyframes gradbar {
-      0% {
-          background-position: 0% 50%
-      }
-      50% {
-          background-position: 100% 50%
-      }
-      100% {
-          background-position: 0% 50%
-      }
+  footer .nav-link:hover {
+    color: #000; /* Change color on hover */
   }
   
-  @keyframes gradbar {
-      0% {
-          background-position: 0% 50%
-      }
-      50% {
-          background-position: 100% 50%
-      }
-      100% {
-          background-position: 0% 50%
-      }
+  footer p {
+    color: #666666;
+    margin: 0; /* Remove default margin for the footer text */
   }
+  .target-numbers .right {
+    width:50%;
+    display:inline-block;
+    padding: 70px 0px;
+  }
+  
  
   /* Media Queries */
   
@@ -737,9 +875,11 @@
       height: 80px;
     }
     .nav-item {
-      position: relative; /* Ensure that dropdown-menu is positioned relative to this item */
+      position: relative; 
+      z-index: 1;
+
   }
-    .nav{
+ .nav{
         position: relative;
         display: flex;
         flex-direction: column;
@@ -944,45 +1084,31 @@
 }
 .carousel-item.item4 {
   height: 60vh;
+  position: relative;
 }
-.custom-caption {
-  position: absolute; /* Absolute positioning to place it at the top */
-  top: 250px; /* Align the caption at the top */
-  left: 200px; /* Stretch across the full width */
-  width: 100%; /* Ensure it takes up the full width of the carousel item */
-  height: 100%; /* Ensure it takes up the full height of the carousel item */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  text-align: left;/* Align the content to the top */
-   /* Center text */
-  padding: 20px; /* Optional padding */
-  box-sizing: border-box;//* Optional: Add padding to the top if needed */
-}
-.custom-caption h1 {
-  font-size: 20px;
-  color: #000000;  
-  margin: 0;   
-  padding: 0 30px; 
-  padding-right: 60px;  
-  margin-top: 150px; 
-  font-family: "Arapey", serif;
-font-weight: 600;
-font-style: normal;
-}
-.custom-caption p {
- display: none;
-}
-.caption-buttons {
-  position: absolute;
-  top: 70%; /* Center vertically */
-  left: 50px; /* Align to the leftmost side */
-  transform: translateY(-50%); /* Center vertically relative to the container */
-  display: flex; /* Display the buttons horizontally */
-  justify-content: flex-start; /* Align buttons to the left */
-  padding: 40px;
-  padding: 0px; /* Space between buttons */
-}  
+/* Base styles for .custom-caption */
+  .custom-caption {
+    top: 40%; /* Adjust top position */
+    left: 45%; /* Adjust left position */
+    width: 95%; /* Adjust width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .custom-caption h1 {
+    font-size: 1.5em; /* Smaller font size */
+    padding: 0 5%; /* Adjust padding */
+    margin-top: 1.5%; /* Adjust margin */
+  }
+
+  .custom-caption p {
+    display: none; /* Smaller font size */
+  }
+
+  .caption-buttons {
+    top: 90%; /* Adjust button position */
+    left: 15%; /* Align to the leftmost side */
+  }
+
 .custom-button1 {
   background-color: #787d78; /* First button color */
   color: #fff;
@@ -1064,23 +1190,114 @@ font-style: normal;
 }
 .about .left p{
   font-size: 15px;
+  margin: 25px 25px;
 }
+
+/* target numbers section*/
+.target-numbers {
+  padding: 30px 10px; 
+}
+.target-numbers .left{
+  width: 100%;
+}
+.target-numbers .left h1 {
+  font-size: 30px;
+}
+.target-numbers .left p {
+  font-size: 15px;
+  margin: 25px 25px;
+}
+.target-numbers .right{
+  padding: 10px 0px 0px 50px;
+  width:100%; 
+}
+.target-numbers .right h1 {
+  font-size: 30px;
+}
+footer {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  justify-content: center;  
+  text-align: center;     
+  width: 100%;
+}
+footer .nav {
+  position: static;   
+  transform: none;   
+  flex-direction: row;   
+  background-color: transparent; 
+  transition: none;   
+  overflow: visible;  
+  list-style: none;  
+  padding: 0;
+  margin: 0 auto;
+  width: auto; 
+}
+.links{
+  margin: 35px 50px 35px 70px;
+}
+
   }
   @media only screen and (min-width: 1000px) {
     .toggle-icon {
       display: none;
      }
   }
-  @media only screen and (max-width: 400px) {
-    .custom-caption h1 {
-      font-size: 20px;
-      color: #000000;  
-      margin: 0;   
-      padding: 0 20px; 
-      padding-right: 20px;  
-      margin-top: 50px; 
-      font-family: "Arapey", serif;
-    font-weight: 600;
-    font-style: normal;
+  @media (max-width: 568px) {
+    .custom-caption {
+      top: 45%; /* Adjust top position */
+      left: 45%; /* Adjust left position */
+      width: 95%; /* Adjust width */
+      height: auto; /* Allow height to adjust */
     }
+  
+    .custom-caption h1 {
+      font-size: 1.5em; /* Smaller font size */
+      padding: 0 5%; /* Adjust padding */
+      margin-top: 1.5%; /* Adjust margin */
+    }
+  
+    .custom-caption p {
+      display: none; /* Smaller font size */
+    }
+  
+    .caption-buttons {
+      top: 90%; /* Adjust button position */
+      left: 15%; /* Align to the leftmost side */
+    }
+    
+  .custom-button1 {
+    background-color: #787d78; /* First button color */
+    color: #fff;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 2px;
+    margin-right: 10px; /* Space between buttons */
+    text-decoration: none;
   }
+  
+  .custom-button2 {
+    background-color: #2b2c2b; /* Second button color */
+    color: #fff;
+    padding: 8px 8px;
+    border: none;
+    text-decoration: none;
+  }
+  .custom-button1 i,
+  .custom-button2 i {
+    display: none;
+  }
+  /*target numbers section*/
+  .target-numbers .right .links{
+    margin: 20px 50px;
+  }
+  .right .links .content h2 {
+    font-size: 25px;
+  }
+  .links{
+    padding: 5px;
+  }
+}
+
+ 

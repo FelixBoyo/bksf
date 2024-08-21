@@ -61,3 +61,42 @@ $(document).click(function(e) {
    }
 });
 
+//target numbers animate
+
+document.addEventListener('DOMContentLoaded', function () {
+   // Function to start the animation
+   function startCounter() {
+       $('.count').each(function () {
+           var $this = $(this);
+           var target = $this.data('target');
+
+           $({ count: 0 }).animate({ count: target }, {
+               duration: 4000,
+               easing: 'swing',
+               step: function (now) {
+                   $this.text(Math.ceil(now));
+               }
+           });
+       });
+   }
+
+   // Create an intersection observer to check when the target-numbers section is in view
+   const observer = new IntersectionObserver(entries => {
+       entries.forEach(entry => {
+           if (entry.isIntersecting) {
+               startCounter(); // Start counter animation when in view
+               observer.unobserve(entry.target); // Stop observing once animation starts
+           }
+       });
+   }, { threshold: 0.5 }); // Adjust threshold to the desired amount of visibility
+
+   // Observe all elements with the class target-numbers
+   const targetSections = document.querySelectorAll('.target-numbers');
+   targetSections.forEach(section => {
+       observer.observe(section);
+   });
+});
+
+
+
+
