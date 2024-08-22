@@ -840,6 +840,11 @@
     text-align: center;     
     width: 100%;
     border-top: 1px solid #c0c0c0;
+    font-family: 'Arial', sans-serif; /* or 'Helvetica', 'Roboto' */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
   }
   footer .nav-item {
     display: flex;
@@ -855,7 +860,7 @@
   }
   
   footer p {
-    color: #666666;
+    color: #4f4a4a;
     margin: 0; /* Remove default margin for the footer text */
   }
   .target-numbers .right {
