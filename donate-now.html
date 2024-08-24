@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Page Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet">
+  <script type="text/javascript" defer src="https://donorbox.org/install-popup-button.js" id="donorbox-popup-button-installer"> </script>
+<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script> 
+  <style>
+    body {
+      background-image: url("images/white-background.jpg");
+    }
+    .donate-page {
+      padding: 100px 50px;
+    }
+    #why-donate {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  text-align: center; /* Center all text inside this section */
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100px; /* Adjust height as needed */
+}
+
+h2 {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+   color: #000000;  
+   font-size: 43px; 
+}
+h3 {
+  font-family: "EB Garamond", serif;
+   font-optical-sizing: auto;
+   font-weight: 600;
+   font-style: normal;
+    color: #000000;  
+    font-size: 25px;  
+    margin-bottom: 10px;
+}
+p {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 400;
+    color: #796d6d; 
+    font-size: 18px;  
+    line-height: 1.6;  
+}
+.title-line {
+  border: none;
+  height: 3px;
+  background-color: rgb(255, 0, 0); /* Line color */
+  width: 40%; /* Adjust width as needed */
+  margin: 10px auto; /* Center the line with some spacing */
+}
+.section line {
+  border: none;
+  height: 3px;
+  background-color: orangered; /* Line color */
+  width: 80%; /* Adjust width as needed */
+  margin: 20px auto; /* Center the line with some spacing */
+}
+
+.reason-line {
+  border: none;
+  height: 8px;
+  background-color: orangered; /* Line color */
+  width: 60%; /* Adjust width as needed */
+  margin: 10px 0; /* Spacing above and below the line */
+}
+.reasons ul {
+    list-style-type: decimal;
+    padding: 10;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.reasons li {
+    margin-bottom: 0px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+h4 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    color: #007272;
+    font-weight: 600;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+}
+
+.reasons p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+.custom-button1{
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1000px) { 
+  h2{
+    font-size: 40px;
+  }
+}
+@media (max-width: 568px) {
+    .donate-page{
+      padding: 70px 30px;
+    }
+    h2{
+      font-size: 23px;
+    }
+    h3{
+      font-size: 19px;
+    }
+    h4{
+      font-size: 16px;
+    }
+    p{
+      font-size: 15px;
+    }
+    .reasons p {
+      font-size: 15px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper-about"> 
+    <nav class="navbar">   
+      
+      <a href="index.html">
+        <img src="images/logo-color.svg" alt="Company Logo">
+    </a>          
+       <div class="menu-toggle" id="mobile-menu">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>  
+       </div>
+       <form class="search-form" >
+        <div class="search">
+          <div class="icon"></div>
+          <div class="input">
+            <input type="text" placeholder="Search..." id="mysearch">
+          </div>
+          <span class="clear" id="close-search">x</span>
+        </div>
+      </form>
+       <div class="donate-button">
+        <a href="donate-now.html" class="donate-link">Donate now</a>
+      </div>
+      
+       <ul class="nav">
+         <li class="nav-item custom-margin"><a href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link custom-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us 
+
+            </a>
+            <i class="fa-solid fa-plus toggle-icon"></i>
+
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+             <a class="dropdown-item" href="#">Who we are</a>
+             <a class="dropdown-item" href="#">Our Team</a>
+           </div>
+         </li> 
+         <li class="nav-item custom-margin"><a href="about.html">What we do</a></li>
+       
+         <li class="nav-item dropdown">
+          <a class="nav-link custom-toggle " href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Resources
+          </a>          
+          <i class="fa-solid fa-plus toggle-icon"></i>
+
+         <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="dropdownMenuLink">
+           <a class="dropdown-item" href="#">Reports</a>
+         </div>
+          </li>
+        <li class="nav-item custom-margin"><a href="c]">Contact Us </a></li>
+       </ul>
+       
+      </nav>
+    
+    
+  </div> 
+
+  <section class="donate-page">
+    <div class="container">
+      <div class="title-wrapper">
+        <h2>Donate to Logel Foundation</h2>
+        <hr class="title-line">
+
+      </div>
+      <p>Thank you for choosing to support the Logel Foundation. Your donation will directly benefit marginalized mothers and children, providing them with the resources and opportunities they need to thrive. Together, we can create lasting change and help build a stronger, more inclusive community.</p>
+  
+      <h3>Why Contribute?</h3>
+      <p>Here’s how your contribution makes a significant impact:</p>
+      <div class="reasons">
+        <ul>
+            <li class="reason">
+                <h4>Fighting Early Child Marriages</h4>
+                <p>Your donation helps combat the practice of early child marriages, ensuring that young girls in the Turkana community have the opportunity to pursue their education and enjoy their childhood without the burden of early marriage.</p>
+            </li>
+    
+            <li class="reason">
+                <h4>Spreading Love Among Marginalized Communities</h4>
+                <p>By contributing, you are spreading love and hope among marginalized communities, particularly in Turkana. Your support helps address the needs of those who are often overlooked and ensures they receive the care and assistance they deserve.</p>
+            </li>
+    
+            <li class="reason">
+                <h4>Sensitizing on Teenage Pregnancies</h4>
+                <p>Your generosity enables us to provide essential education and resources to prevent teenage pregnancies. We offer guidance and support to young girls, helping them make informed decisions and build a better future.</p>
+            </li>
+        </ul>
+      </div>
+
+      <h3>The Impact of Your Support</h3>
+      <div class="reasons">
+        <ul>
+            <li class="reason">
+                <h4>Fighting Early Child Marriages</h4>
+                <p>Your support enables the construction of boreholes, providing essential clean water to communities in need.</p>
+            </li>
+    
+            <li class="reason">
+                <h4>Sanitary Pads for School Girls</h4>
+                <p>   Your generosity supplies school-going girls with sanitary pads, helping them maintain their dignity and continue their education without interruption.</p>
+            </li>
+    
+            <li class="reason">
+                <h4>Mother and Child Care Support</h4>
+                <p> With your help, we offer vital care and resources to mothers and their children, ensuring their health and well-being.</p>
+            </li>
+
+            <li class="reason">
+              <h4>Food Supply</h4>
+              <p> Contributions help ensure that food reaches those who are struggling, particularly in areas affected by adverse weather conditions. </p>
+          </li>
+        </ul>
+      </div>
+
+      <h3>Ways to Donate:</h3>
+      <p>Your support is crucial in helping us achieve our mission.
+         Here are various ways you can contribute to the Logel Foundation. 
+         Each donation method is secure, and every contribution makes a
+          meaningful difference in the lives of those we serve.</p>
+       
+          <h4>Online Donations</h4>
+          <p>Easily make a donation online using our secure donation form. Choose any amount that suits you and receive an immediate confirmation of your contribution.</p>    
+      <a href="https://donorbox.org/food-to-disl" class="custom-dbox-popup btn btn-primary custom-button1 ">Donate now <i class="fa-solid fa-chevron-right"></i></a>
+
+      <h4>Bank Transfer</h4>
+      <p>If you prefer to make a donation via bank transfer, you can do so using the following details:</p>
+      <p><strong>Bank Name:</strong> </p>
+      <p><strong>Account Name:</strong></p>
+      <p><strong>Account Number:</strong> </p>
+      <p><strong>Swift Code:</strong> </p>
+      <p><strong>Bank Code:</strong> </p>
+      <p><strong>Clearing Code:</strong> </p>
+      <p><strong>Branch:</strong> </p>
+      <p><strong>Postal Code:</strong> </p>
+
+      <h4>Mpesa</h4>
+      <p>Donate easily through M-Pesa using the details below:</p>
+      <p><strong>Paybill Number:</strong> </p>
+      <p><strong>Account Number:</strong></p>
+      <p>Simply use M-Pesa to send your contribution to the above details. For assistance, please contact us at [email address].</p>
+      <p>
+         <img src="images/till-mpesa.jpg" alt="M-Pesa Logo" style="max-width: 200px; height: auto;">
+      </p>
+    </div>
+  </section>
+  
+ 
+      <script src="script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
