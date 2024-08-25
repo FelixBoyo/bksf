@@ -7,8 +7,8 @@
   html, body {
     height: 100%; /* Ensure the body can grow with content */
     overflow-y: auto;
-    background-color: #ffffff;
-}
+    background-image: url("images/white-background.jpg");
+  }
   
   /* HEADINGS */
   
@@ -518,35 +518,55 @@
 
 /* About us section */
 .page-wrapper-about {
-  background-color: #ffffff;
+  background-image: url("images/white-background.jpg");
 }
  .about-us-section {
-    background-color: #ffffff;   
-    padding: 160px 20px;  
+    background-image: url("images/white-background.jpg");
+    padding: 160px 20px 60px 20px;  
     border-radius: 8px;  
     max-width: 900px;  
     margin: 0 auto;  
 }
-
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100px; /* Adjust height as needed */
+}
+.title-line {
+  border: none;
+  height: 3px;
+  background-color: rgb(255, 0, 0); /* Line color */
+  width: 60%; /* Adjust width as needed */
+  margin: 10px auto; /* Center the line with some spacing */
+}
 .about-us-section h2 {
-   font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  color: #000000;
+  font-size: 43px;
+}
+.about-us-section h3 {
+  font-family: "EB Garamond", serif;
    font-optical-sizing: auto;
-   font-weight: 500;
+   font-weight: 600;
    font-style: normal;
     color: #000000;  
-    font-size: 43px;  
-    margin-bottom: 20px; 
+    font-size: 25px;  
+    margin-bottom: 10px;
 }
-
 .about-us-section p {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:"wdth" 400;
-    color: #000000; 
+    color: #796d6d; 
     font-size: 18px;  
-    line-height: 1.6;   
+    line-height: 1.6;  
     margin-bottom: 40px;  
 }
 .italic{
@@ -570,10 +590,11 @@
    border-radius: 4px; /* Slightly rounded corners */
 }
 .about-us-section ul {
-    list-style-type: disc; /* Bullet points */
+    list-style-type: decimal; /* Bullet points */
     margin-left: 20px; /* Indentation for the list */
-    color: #555; /* Same text color as paragraphs */
+    color: #796d6d; 
 }
+
 
 .about-us-section ul li {
   font-family: "Noto Serif", serif;
@@ -581,50 +602,52 @@
   font-weight: 400;
   font-style: normal;
   font-variation-settings:"wdth" 400;
-  color: #000000; 
-  font-size: 18px;  /* Match font size of paragraph& */
+  color: #796d6d; 
+  font-size: 18px;  
+  margin-bottom: 10px;
 }
 .mission-content {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Ensures space between text and image */
-  flex-wrap: wrap; /* Allows for responsive design */
+  flex-wrap: wrap; 
+  margin-bottom: 20px;
 }
 
-.mission-text {
-  flex: 1;
-  padding-right: 40px; /* Space between text and image */
-}
 
-.mission-image {
-  flex: 1;
-  max-width: 50%; /* Adjust size if needed */
-}
+
 
 .mission-image img {
   width: 80%;
   height: auto;
   border-radius: 0px; /* Optional: adds rounded corners */
 }
-.goals-section h2 {
+.objectives-section h2 {
   margin-bottom: 20px;
 }
-.goals-section ul {
-  list-style-type: none; /* Removes default bullet points */
+.objectives-section ul {
+  list-style-type: decimal;
   padding: 0;
 }
 
-.goals-section li {
+.objectives-section ul li {
   display: flex;
   align-items: center;
-  gap: 20px; /* Space between image and text */
-  margin-bottom: 60px; /* Space between list items */
-  line-height: 1.6; /* Improve readability */
+  gap: 20px;  
+  margin-bottom: 60px; 
+  line-height: 1.6;  
 }
-.goals-section li p{
+.objectives-section li p{
   margin-bottom: 0px;
 }
-.goals-section img {
+.objectives-section li p strong {
+  font-size: 1.25rem;
+  color: #007272;
+  font-weight: 600;
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+}
+.objectives-section img {
   width: 100%; /* Adjust size as needed */
   height: 200px;
   }
@@ -695,7 +718,7 @@
   padding:0% 0;
   width:100%;
   height:auto;
-  background-color:#ffffff;
+  background-image: url("images/white-background.jpg");
 }
 .target-numbers .left{
   padding:  6%;;
@@ -1138,7 +1161,7 @@
 
 /* about us section*/
 .about-us-section {
-  padding: 80px 10px;  
+  padding: 80px 30px;  
 }
 
 .about-us-section h2 {
@@ -1172,12 +1195,12 @@
   margin-bottom: 20px;
 }
 
-.goals-section li {
+.objectives-section li {
   flex-direction: column;   
   align-items: flex-start;  
 }
 
-.goals-section img {
+.objectives-section img {
   height: 100%;  
   width: 250px;  
 }
