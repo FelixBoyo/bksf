@@ -1218,6 +1218,9 @@
   font-size: 15px;
   margin: 25px 25px;
 }
+.main-link {
+  cursor: pointer; /* Indicate it's clickable */
+}
 
 /* target numbers section*/
 .target-numbers {

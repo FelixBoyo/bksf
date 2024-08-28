@@ -32,21 +32,29 @@ document.addEventListener('click', function(event) {
 });
 
 
-$('.toggle-icon').click(function() {
-   var $dropdownMenu = $(this).next('.dropdown-menu');
-   
-   // Toggle dropdown visibility
-   if ($dropdownMenu.hasClass('show')) {
-       $dropdownMenu.removeClass('show');
-       $(this).removeClass('fa-minus').addClass('fa-plus');
-   } else {
-       $('.dropdown-menu').removeClass('show'); // Hide other dropdowns
-       $('.toggle-icon').removeClass('fa-minus').addClass('fa-plus'); // Reset icons
-       
-       $dropdownMenu.addClass('show');
-       $(this).removeClass('fa-plus').addClass('fa-minus');
-   }
+$('.main-link').click(function (e) {
+    if ($(window).width() < 768) { // Check if screen size is smaller (mobile view)
+        e.preventDefault(); // Prevent default navigation
+        var $dropdownMenu = $(this).next('.dropdown-menu');
+        var $toggleIcon = $(this).next().find('.toggle-icon'); // Find the associated toggle icon
+
+        // Toggle dropdown visibility
+        if ($dropdownMenu.hasClass('show')) {
+            $dropdownMenu.removeClass('show');
+            $toggleIcon.removeClass('fa-minus').addClass('fa-plus'); // Reset icon to plus
+        } else {
+            $('.dropdown-menu').removeClass('show'); // Hide other dropdowns
+            $('.toggle-icon').removeClass('fa-minus').addClass('fa-plus'); // Reset icons to plus
+
+            $dropdownMenu.addClass('show');
+            $toggleIcon.removeClass('fa-plus').addClass('fa-minus'); // Change icon to minus
+        }
+    }
 });
+
+
+
+
 
 // Hide dropdowns if clicked outside
 $(document).click(function(e) {
@@ -60,6 +68,7 @@ $(document).click(function(e) {
        $(".mobile-nav").removeClass("is-active");
    }
 });
+
 
 //target numbers animate
 
